@@ -9,11 +9,16 @@ Complete the function sayLouder such that it makes the text in uppercase.
 /*iNTRO : INDEX.JS*/
 /********************************/
 /**
- * @param {string} email
+ * @param {string} text
  */
-export const getEmail = email => {
-    return email.trim();
+function sayLouder(text) {
+    return text.toUpperCase();
 }
+
+// sample usage (do not modify)
+console.log(sayLouder("It works"));
+console.log(sayLouder("how are you?"));
+
 
 /************************SUBMITTED************************/
 /**
