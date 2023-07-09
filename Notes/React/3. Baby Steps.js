@@ -1,7 +1,6 @@
-/* 2. Array filter *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+/* 3. Baby Steps *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
-Complete the function getPositiveNumbers such that it returns all numbers greater than 0.
-
+Complete the getReactVersion method such that it returns the current installed version of React.
 */
 
 /********************************/
