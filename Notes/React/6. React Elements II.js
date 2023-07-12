@@ -8,19 +8,22 @@ Complete the createTitle function such that it creates a React Element that repr
 /********************************/
 import React from "react";
 
-function createDivElement() {
-    return React.createElement("div", {}, "Hello World!")
+function createTitle() {
+    return React.createElement("h1", {
+        className: "hero-title"
+    }, "Welcome to our supermarket");
 }
 
 // sample usage (do not modify)
-console.log(createDivElement());
+console.log(createTitle());
+
 
 /************************SUBMITTED************************/
 import React from "react";
-function createDivElement() {
-   return React.createElement("div", {}, "Hello World");
+function createTitle() {
+   return React.createElement("h1",{className: "hero-title"}, "Welcome to our supermarket");
 }
 
 // sample usage (do not modify)
-console.log(createDivElement());
+console.log(createTitle());
 /***************************************************************************************/
