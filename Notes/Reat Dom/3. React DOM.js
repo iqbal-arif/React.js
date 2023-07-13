@@ -1,5 +1,3 @@
-
-
 /* 5. React DOM I *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 Render the element variable on the page inside the given root in the index.html page.
@@ -8,7 +6,7 @@ Also make sure to check the code inside the index.html file so that you can get 
 */
 
 /********************************/
-/*iNTRO : INDEX.JS*/
+/*REACT DOM I : INDEX.JS*/
 /********************************/
 import React from "react";
 
@@ -25,4 +23,10 @@ import {createRoot} from "react-dom/client";
 const root = document.querySelector("#react-root");
 const element = React.createElement("p", {}, "Hello World");
 createRoot(root).render(element);
+/***************************************************************************************/
+/***************************************************************************************/
+/********************************/
+/*REACT DOM I : INDEX.HTML*/
+/********************************/
+<div id="react-root"></div>
 /***************************************************************************************/
