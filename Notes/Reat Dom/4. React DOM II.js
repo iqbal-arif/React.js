@@ -4,7 +4,7 @@ Render an <h1>Online Supermarket</h1> on the page inside the given root.
 */
 
 /********************************/
-/*REACT DOM I : INDEX.JS*/
+/*REACT DOM : INDEX.JS*/
 /********************************/
 import React from "react";
 import {createRoot} from "react-dom/client";
@@ -27,7 +27,7 @@ createRoot(root).render(element);
 /***************************************************************************************/
 /***************************************************************************************/
 /********************************/
-/*REACT DOM I : INDEX.HTML*/
+/*REACT DOM : INDEX.HTML*/
 /********************************/
 <div id="react-root"></div>
 /***************************************************************************************/

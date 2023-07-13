@@ -6,7 +6,7 @@ Also make sure to check the code inside the index.html file so that you can get 
 */
 
 /********************************/
-/*REACT DOM I : INDEX.JS*/
+/*REACT DOM : INDEX.JS*/
 /********************************/
 import React from "react";
 import {createRoot} from "react-dom/client";
@@ -26,7 +26,7 @@ createRoot(root2).render(element2);
 /***************************************************************************************/
 /***************************************************************************************/
 /********************************/
-/*REACT DOM I : INDEX.HTML*/
+/*REACT DOM : INDEX.HTML*/
 /********************************/
 <div id="react-root"></div>
 /***************************************************************************************/
