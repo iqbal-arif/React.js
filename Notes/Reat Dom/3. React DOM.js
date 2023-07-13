@@ -9,20 +9,20 @@ Also make sure to check the code inside the index.html file so that you can get 
 /*REACT DOM I : INDEX.JS*/
 /********************************/
 import React from "react";
+import {createRoot} from "react-dom/client";
 
-function createDivElement() {
-    return React.createElement("div", {}, "Hello World!")
-}
+const element = React.createElement("p", {}, "Hello World");
+const root = document.querySelector("#react-root");
 
-// sample usage (do not modify)
-console.log(createDivElement());
+createRoot(root).render(element);
+
 
 /************************SUBMITTED************************/
 import React from "react";
 import {createRoot} from "react-dom/client";
-const root = document.querySelector("#react-root");
-const element = React.createElement("p", {}, "Hello World");
-createRoot(root).render(element);
+const root2 = document.querySelector("#react-root");
+const element2 = React.createElement("p", {}, "Hello World");
+createRoot(root2).render(element2);
 /***************************************************************************************/
 /***************************************************************************************/
 /********************************/
