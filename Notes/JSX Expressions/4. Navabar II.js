@@ -10,15 +10,17 @@ Where USER is the first name and last name of the user received as an argument.
 /* INTRO JSX : INDEX.JS*/
 /********************************/
 function getNavbar(user) {
-    return <div>Logged in as {user.name}. Log out</div>;
+    return <div>Logged in as {user.firstName} {user.lastName}. Log out</div>;
 }
 
 // sample usage (do not modify)
-const element2 = getNavbar({
-    name: "Sam",
-    age: 34
+const element = getNavbar({
+    firstName: "Sam",
+    lastName: "Dung",
+    age: 27
 });
-console.log(element2);
+console.log(element);
+
 
 /************************SUBMITTED************************/
 function getNavbar(user) {
