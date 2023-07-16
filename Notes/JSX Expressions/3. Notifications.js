@@ -6,7 +6,7 @@ Where X is the number of notifications.
 */
 
 /********************************/
-/* INTRO JSX : INDEX.JS*/
+/* JSX EXPRESSIONS : INDEX.JS*/
 /********************************/
 function getNotifications(notifications) {
     return <p>You have {notifications.length} new notifications</p>

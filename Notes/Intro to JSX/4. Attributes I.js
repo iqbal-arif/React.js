@@ -7,7 +7,7 @@ Using JSX, render a paragraph element with the text My first JSX
 /********************************/
 import {createRoot} from "react-dom/client";
 
-const root = document.querySelector("#react-root");
+const root2 = document.querySelector("#react-root");
 
 createRoot(root).render(<p className="selected" id="promo">Hello World</p>);
 

@@ -6,7 +6,7 @@ Where USER is the name of the user received as an argument.
 */
 
 /********************************/
-/* INTRO JSX : INDEX.JS*/
+/* JSX EXPRESSIONS : INDEX.JS*/
 /********************************/
 function getNavbar(user) {
     return <div>Logged in as {user.name}. Log out</div>;
@@ -39,3 +39,4 @@ console.log(element);
 /********************************/
 {/* <div id="react-root"></div> */}
 /***************************************************************************************/*/
+
