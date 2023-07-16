@@ -12,21 +12,14 @@ Every payment method should be a list item (li) with the 2 classes,
 /********************************/
 /* JSX EXPRESSIONS : INDEX.JS*/
 /********************************/
-function getPaymentButton(user) {
-    let name = "disabled";
-    if (user.is_loggedin) {
-        name = "clickable";
-    }
-
-    return <button className={name}>Pay</button>;
+function getPaymentMethod(name) {
+    return <li className={"payment-method option-" + name.toLowerCase()}>{name}</li>
 }
 
 // sample usage (do not modify)
-const user2 = {
-    id: 1,
-    is_loggedin: true
-}
-console.log(getPaymentButton(user));
+console.log(getPaymentMethod("Card"));
+console.log(getPaymentMethod("Paypal"));
+
 
 /************************SUBMITTED************************/
 function getPaymentMethod(name) {
