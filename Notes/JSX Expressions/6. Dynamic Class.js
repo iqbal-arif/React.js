@@ -1,41 +1,46 @@
-/* 2. Navbar II-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+/* 6. Dynamic class-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
-Complete the getNavbar function such that it returns a div with the message: Logged in as USER. Log out
-Where USER is the first name and last name of the user received as an argument.
-
+Complete the getPaymentButton function such that it returns a button with the text Pay. When the user is logged out, it should have the class disabled, and otherwise the class clickable.
 
 */
 
 /********************************/
 /* JSX EXPRESSIONS : INDEX.JS*/
 /********************************/
-function getNavbar(user) {
-    return <div>Logged in as {user.firstName} {user.lastName}. Log out</div>;
+function getPaymentButton(user) {
+    let name = "disabled";
+    if (user.is_loggedin) {
+        name = "clickable";
+    }
+
+    return <button className={name}>Pay</button>;
 }
 
 // sample usage (do not modify)
-const element2 = getNavbar({
-    firstName: "Sam",
-    lastName: "Dung",
-    age: 27
-});
-console.log(element);
-
+const user2 = {
+    id: 1,
+    is_loggedin: true
+}
+console.log(getPaymentButton(user));
 
 /************************SUBMITTED************************/
-function getNavbar(user) {
-    if (user.firstName && user.lastName){
-        return <div>Logged in as {user.firstName+ " " +user.lastName}. Log out</div>
+function getPaymentButton(user) {
+    let name = "disabled";
+    if (user.is_loggedin) {
+        name = "clickable";
+        return <button className={name}>Pay</button>
+    }else{
+
+    return <button className={name}>Pay</button>;
     }
-    }
-    
-    // sample usage (do not modify)
-    const element = getNavbar({
-        firstName: "Sam",
-        lastName: "Dung",
-        age: 27
-    });
-    console.log(element);
+}
+
+// sample usage (do not modify)
+const user = {
+    id: 1,
+    is_loggedin: true
+}
+console.log(getPaymentButton(user));
 /***************************************************************************************/
 
 /********************************/
