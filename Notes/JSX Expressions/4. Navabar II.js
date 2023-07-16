@@ -1,4 +1,4 @@
-/* 2. Navbar II-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+/* 4. Navbar II-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
 Complete the getNavbar function such that it returns a div with the message: Logged in as USER. Log out
 Where USER is the first name and last name of the user received as an argument.
