@@ -13,13 +13,19 @@ Every option should have a class payment-method (singular).
 /********************************/
 /* JSX II : INDEX.JS*/
 /********************************/
-function getPaymentMethod(name) {
-    return <li className={"payment-method option-" + name.toLowerCase()}>{name}</li>
+function getPaymentMethods() {
+    return (
+        <select className="payment-methods">
+            <option className="payment-method">Card</option>
+            <option className="payment-method">Paypal</option>
+            <option className="payment-method">Cash on delivery</option>
+        </select>
+    );
 }
 
 // sample usage (do not modify)
-console.log(getPaymentMethod("Card"));
-console.log(getPaymentMethod("Paypal"));
+console.log(getPaymentMethods());
+
 
 
 /************************SUBMITTED************************/
