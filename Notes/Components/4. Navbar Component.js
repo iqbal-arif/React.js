@@ -7,19 +7,23 @@ Using React DOM and React.createElement render the Navbar component into the DOM
 /********************************/
 /* COMPONENT : INDEX.JS*/
 /********************************/
+import React from "react";
 import {createRoot} from "react-dom/client";
 
-function Hero(){
+// do not modify this function
+function Navbar() {
     return (
-      <>
-        <h1>Welcome to our supermarket</h1>
-        <p>Start shopping</p>
-      </>
+        <>
+            <h3>Supermarket</h3>
+            <p>Start shopping</p>
+        </>
     );
 }
 
-// do not modify
-createRoot(document.querySelector("#react-root")).render(<Hero></Hero>);
+const root = document.querySelector("#react-root");
+
+createRoot(root).render(React.createElement(Navbar, {}));
+
 
 /************************SUBMITTED************************/
 import React from "react";
