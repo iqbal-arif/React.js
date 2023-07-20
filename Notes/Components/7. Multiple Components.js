@@ -44,15 +44,15 @@ function App() {
     </>);
 }
 
-const root = document.querySelector("#react-root");
+// const root = document.querySelector("#react-root");
 
-createRoot(root).render(<App />);
+// createRoot(root).render(<App />);
 
 // Sample usage (do not modify)
 createRoot(document.querySelector("#react-root")).render(<App />);
 
 /********************************/
-/* COMPONENT : HERO.JS*/
+/* COMPONENT : BUTTON.JS*/
 /********************************/
 // Define the Hero Component
 export default function Hero(){
@@ -65,14 +65,12 @@ export default function Hero(){
 }
 
 /************************SUBMITTED************************/
-// Define the Hero Component
-export default function Hero(){
-    return(
+export default function Button(){
+    return (
         <>
-        <h1 className="title">Supermarket</h1>
-        <p>Start shopping</p>
+            <button>Button text</button>
         </>
-    );
+    )
 }
 /***************************************************************************************/
 
