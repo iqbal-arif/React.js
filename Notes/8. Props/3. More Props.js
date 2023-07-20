@@ -1,0 +1,54 @@
+
+
+/* 3. More props *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Fix the Navbar component such that it renders:
+
+    1. a <div> with the message: Welcome X where X is the user's full name.
+    2. a <p> with the message: You've got Y notifications where Y is the number of notifications.
+
+    As you can see, the props can be a string or even an array or an object!
+*/
+
+/********************************/
+/* PROPS : INDEX.JS*/
+/********************************/
+import {createRoot} from "react-dom/client";
+
+function ShoppingCart(props) {
+    return <div>{props.count} items in your cart</div>;
+}
+
+const root = document.querySelector("#react-root");
+createRoot(root).render(<ShoppingCart count="5" />);
+
+
+/************************SUBMITTED************************/
+import {createRoot} from "react-dom/client";
+
+function Navbar() {
+    return null;
+}
+
+let notifications = [{
+    id: 1,
+    text: "Order delivered"
+}, {
+    id: 2,
+    text: "Order received"
+}];
+
+const user = {
+    first_name: "Sam",
+    last_name: "Wolf"
+};
+
+const root = document.querySelector("#react-root");
+createRoot(root).render(<Navbar notifications={notifications} user={user} />);
+
+/***************************************************************************************/
+
+/********************************/
+/* PROPS : INDEX.HTML*/
+/********************************/
+{ <div id="react-root"></div>}
+/***************************************************************************************/
