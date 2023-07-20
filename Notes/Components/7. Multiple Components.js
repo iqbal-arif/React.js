@@ -54,14 +54,8 @@ createRoot(document.querySelector("#react-root")).render(<App />);
 /********************************/
 /* COMPONENT : BUTTON.JS*/
 /********************************/
-// Define the Hero Component
-export default function Hero(){
-    return (
-        <>
-            <h1 className="title">Supermarket</h1>
-            <p>Start shopping</p>
-        </>
-    )
+export default function Button(){
+    return <button>Button text</button>
 }
 
 /************************SUBMITTED************************/
@@ -69,6 +63,21 @@ export default function Button(){
     return (
         <>
             <button>Button text</button>
+        </>
+    )
+}
+/********************************/
+/* COMPONENT : LINK.JS*/
+/********************************/
+export default function Link(){
+    return <a>Link text</a>
+}
+
+/************************SUBMITTED************************/
+export default function Link(){
+    return (
+        <>
+        <a scr="link text">Link text</a>
         </>
     )
 }
