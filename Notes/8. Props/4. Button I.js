@@ -38,12 +38,20 @@ createRoot(root).render(<Navbar notifications={notifications} user={user} />);
 /************************SUBMITTED************************/
 import {createRoot} from "react-dom/client";
 
-function Button() {
-    return <button>Text here</button>;
+function Button(props) { 
+    let size = props.size;      
+            if(size==="small"){
+                return <button className="btn-small"></button>;
+            } else if (size ==="large"){
+                return <button className="btn-large"></button>;
+            } else {
+                return <button className="btn-medium"></button>;
+            }
 }
 
 const root = document.querySelector("#react-root");
 createRoot(root).render(<Button size="small" />);
+
 
 /***************************************************************************************/
 
