@@ -11,28 +11,33 @@ Fix the Button component such that it renders the button with class:
 /********************************/
 import {createRoot} from "react-dom/client";
 
-function Navbar(props) {
-    return (<>
-        <div>Welcome {props.user.first_name} {props.user.last_name}</div>
-        <p>You've got {props.notifications.length} notifications</p>
-    </>);
+function Button(props) {
+    const size = props.size;
+    let className = "btn-medium";
+
+    if (size === "small"){
+        className = "btn-small";
+    } else if (size === "large"){
+        className = "btn-large";
+    }
+
+    return <button className={className}>Text here</button>;
 }
 
-let notifications=[{
-    id: 1,
-    text: "Order delivered"
-}, {
-    id: 2,
-    text: "Order received"
-}];
+const root = document.querySelector("#react-root");
+createRoot(root).render(<Button size="small" />);
+/***********************************************************/
+import {createRoot} from "react-dom/client";
 
-const user = {
-    first_name: "Sam",
-    last_name: "Wolf"
-};
+function Button(props) {
+    const size = props.size ?? "medium";
+
+    return <button className={`btn-${size}`}>Text here</button>;
+}
 
 const root = document.querySelector("#react-root");
-createRoot(root).render(<Navbar notifications={notifications} user={user} />);
+createRoot(root).render(<Button size="small" />);
+
 
 
 /************************SUBMITTED************************/
