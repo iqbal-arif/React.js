@@ -40,13 +40,18 @@ import {createRoot} from "react-dom/client";
 
 function Button(props) { 
     let size = props.size;      
-            if(size==="small"){
-                return <button className="btn-small"></button>;
-            } else if (size ==="large"){
-                return <button className="btn-large"></button>;
-            } else {
-                return <button className="btn-medium"></button>;
-            }
+            // if(size==="small"){
+            //     return <button className="btn-small"></button>;
+            // } else if (size ==="large"){
+            //     return <button className="btn-large"></button>;
+            // } else {
+            //     return <button className="btn-medium"></button>;
+            // }
+        // Nullish Coalescing Assignment (??=) Operator in JavaScript
+        // if size = nullish or undefined 
+        size ??= "medium"
+        return <button className={`btn-${size}`}></button>;
+ 
 }
 
 const root = document.querySelector("#react-root");
