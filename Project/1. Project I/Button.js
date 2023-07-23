@@ -1,4 +1,10 @@
 export default function Button(props){
-    let disabled
-       disabled === true ? <button type={props.type} className="ui-button">{props.children}</button> : false
-  }
+    console.log(props)
+    console.log(props.disabled)
+    return( 
+        <>   
+    <div>
+        <button type={props.type} className="ui-button" >{props.children}</button>
+    </div>
+    </>)
+} 
