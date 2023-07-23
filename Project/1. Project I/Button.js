@@ -8,3 +8,13 @@ export default function Button(props){
     </div>
     </>)
 } 
+export default function Button(props){
+    console.log(props)
+    console.log(props.children)
+    return(
+        <>
+        <div className="ui-button">
+        <button  type={props.type}>props.children</button>
+         </div>
+    </>) 
+} 
