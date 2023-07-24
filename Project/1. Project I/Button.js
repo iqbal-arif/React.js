@@ -18,3 +18,18 @@ export default function Button(props){
          </div>
     </>) 
 } 
+
+export default function Button(props){
+    console.log(props)
+    console.log(props.children)
+    console.log(props.children.length)
+        if(props.children.length!==0){
+    return(
+        <>
+        
+        <div className="ui-button">
+        <button  type={props.type}>{props.children}</button>
+         </div>
+    </>) 
+        }
+}
