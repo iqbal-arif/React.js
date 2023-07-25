@@ -58,3 +58,16 @@ export default function Button(props){
        </div>
    </>) 
 } 
+
+export default function Button(props){
+    console.log(props.disabled)
+    let propsA = [props.type,props.disabled,props.text];
+    console.log(propsA[0])
+    // let text = props.children
+   return(
+       <>
+       <div className="ui-button" >
+       <button  type={propsA[0]} disabled={propsA[1]} >{propsA[2]}</button>
+       </div>
+   </>) 
+} 
