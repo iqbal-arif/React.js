@@ -1,0 +1,84 @@
+1. Pure functions
+Last updated March 2023
+******
+Thank you for being a PRO user!
+
+We recommend you join our GitHub community for PRO users only, where you can ask questions and get product updates. We also have a list of notable discussions where we recommend resources and conferences to stay up to date.
+
+You can join the GitHub discussion by clicking on the PRO icon in the top right icon and then selecting the GitHub discussions list item.
+
+As we talk more about the Virtual DOM, you will see later in this course how React figures out efficiently which components to update when a certain value changes.
+
+For us to help React in achieving optimal performance, it's important to follow one of the most important rules of React, which is:
+
+2. All React components should never modify their props.
+****
+This means that you should never change the value of the prop inside the component; let's see an example:
+
+```
+function Notifications(props) {
+    // ❌ do NOT do this (this is changing the props)
+    props.data.count = props.data.count - 1;
+    return <h3>You have {props.data.count} unread notifications.</h3>;
+}
+
+const notifications = {
+    count: 3
+};
+
+const element = <Notifications data={notifications} />;
+console.log(notifications); // {count: 2}
+```
+Notice how using the <Notifications data={notifications}/> element had a side effect which is changing the value of its props (notifications.count).
+
+Instead, it should have been written like so:
+
+```
+function Notifications(props) {
+    // ☑️ this is okay because we're not changing the props
+    const value = props.data.count - 1;
+    return <h3>You have {value} unread notifications.</h3>;
+}
+
+const notifications = {
+    count: 3
+};
+
+const element = <Notifications data={notifications} />;
+console.log(notifications); // {count: 3}
+```
+So you should think of props as read-only.
+
+3. Same input, same output
+***
+To maintain the same input, same output philosophy, your component should not modify any variables outside of React. For example, this is impure and should be avoided:
+
+```
+let count = 0;
+
+function Counter () {
+  // ❌ impure - do NOT use
+  count = count + 1;
+
+  return <p>{count}</p>;
+}
+```
+We'll later learn how to use state and effects (if necessary) to make our components more dynamic while maintaining purity.
+
+4. Why does React require that?
+****
+React requires that because then your functions are pure, which means that given the same input (props), they will always have the same result (output).
+
+This allows React to quickly identify which Components need to re-render when a certain prop updates. This happens as part of the Virtual DOM.
+This becomes very important when your app contains hundreds if not thousands of components that need to be re-rendered.
+
+There are also other benefits with regards to testing & predictability, as well as the new concurrent features in React 18 which we'll discuss later in the course.
+It's much easier to test pure functions, and it helps you prevent unexpected bugs.
+
+/\***\*\*\*\*\***\*\*\***\*\*\*\*\***\*\*\***\*\*\*\*\***\*\*\***\*\*\*\*\***\*\*\***\*\*\*\*\***\*\*\***\*\*\*\*\***/
+Recap
+
+    1. All React Components should never modify their props.
+    2. React expects Components to be pure so that it can efficiently update the DOM only when/where necessary.
+/\***\*\*\*\*\***\*\*\***\*\*\*\*\***\*\*\***\*\*\*\*\***\*\*\***\*\*\*\*\***\*\*\***\*\*\*\*\***\*\*\***\*\*\*\*\***/
+
