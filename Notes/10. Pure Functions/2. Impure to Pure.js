@@ -1,7 +1,6 @@
-/* 2. Hero Component *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-
-Create a Hero Component that represents an h1 with the text: Welcome to our supermarket followed by a paragraph with the text: Start shopping.
-
+/* 2. Impure to Pure *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Fix the Navbar Component such that it becomes pure.
+It should not modify its props and it should produce the same output when given the same input.
 */
 
 /********************************/
