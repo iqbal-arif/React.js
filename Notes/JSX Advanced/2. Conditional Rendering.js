@@ -12,6 +12,9 @@ We've already rendered 2 examples for you, one where the user is provided and th
 import {createRoot} from "react-dom/client";
 
 function WelcomeUser(props) {
+    if (!props.user) {
+        return null;
+    }
     return <h1>Welcome {props.user.name}</h1>
 }
 
@@ -26,35 +29,31 @@ createRoot(root).render(<>
         <WelcomeUser />
     </>);
 
+
 /************************SUBMITTED************************/
 import {createRoot} from "react-dom/client";
 
-function Navbar(props) {
-    const full_name = `${props.user.first_name} ${props.user.last_name}`;
-    const age = props.user.age;
-    return (<div>
-        Hello {full_name}.<br />
-        You are now {age+1} years old.
-    </div>);
+function WelcomeUser(props) {
+    if(!props.user){
+    return null
+    }
+    return <h1>Welcome {props.user.name}</h1>
 }
 
 const user = {
-    first_name: "Sam",
-    last_name: "Doe",
-    age: 26
-}
-
+    id: 1,
+    name: "Sam Blue"
+};
 const root = document.querySelector("#react-root");
-// does the Component render the same thing
-// when given the same props?
+
 createRoot(root).render(<>
-    <Navbar user={user} />
-    <Navbar user={user} />
-</>);
+        <WelcomeUser user={user} />
+        <WelcomeUser />
+    </>);
 /***************************************************************************************/
 
 /********************************/
-/* PURE FUNCTIONS : INDEX.HTML*/
+/* JSX ADVANCED : INDEX.HTML*/
 /********************************/
 <div id="react-root"></div>
 /***************************************************************************************/*/
