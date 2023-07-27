@@ -1,7 +1,12 @@
-/* 2. Conditional rendering *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+/* 3. Dark theme I *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
-Fix the WelcomeUser Component such that it returns nothing when the user prop is not provided.
-We've already rendered 2 examples for you, one where the user is provided and the other where the user is not provided. However, one of these is failing for some reason.
+Update the Navbar Component such that it renders:
+
+    in dark mode when the theme is "dark"
+    in light mode when the theme is "light"
+
+We've already given you the styles for dark theme and light theme which you need to apply.
+
 */
 
 /********************************/
@@ -31,22 +36,15 @@ createRoot(root).render(<>
 /************************SUBMITTED************************/
 import {createRoot} from "react-dom/client";
 
-function WelcomeUser(props) {
-    if(!props.user){
-    return null
-    }
-    return <h1>Welcome {props.user.name}</h1>
+function Navbar() {
+    return <h1>Online supermarket</h1>
 }
 
-const user = {
-    id: 1,
-    name: "Sam Blue"
-};
 const root = document.querySelector("#react-root");
 
 createRoot(root).render(<>
-        <WelcomeUser user={user} />
-        <WelcomeUser />
+        <Navbar theme="light" />
+        <Navbar theme="dark" />
     </>);
 /***************************************************************************************/
 
