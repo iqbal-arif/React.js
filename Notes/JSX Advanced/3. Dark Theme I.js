@@ -14,32 +14,30 @@ We've already given you the styles for dark theme and light theme which you need
 /********************************/
 import {createRoot} from "react-dom/client";
 
-function WelcomeUser(props) {
-    if (!props.user) {
-        return null;
-    }
-    return <h1>Welcome {props.user.name}</h1>
+function Navbar(props) {
+    return <h1 className={props.theme}>Online supermarket</h1>
 }
 
-const user = {
-    id: 1,
-    name: "Sam Blue"
-};
 const root = document.querySelector("#react-root");
 
 createRoot(root).render(<>
-        <WelcomeUser user={user} />
-        <WelcomeUser />
+        <Navbar theme="light" />
+        <Navbar theme="dark" />
     </>);
+
 
 
 /************************SUBMITTED************************/
 import {createRoot} from "react-dom/client";
 
-function Navbar() {
-    return <h1>Online supermarket</h1>
+function Navbar(props) {
+    // console.log(props.theme)
+ if (props.theme!=="light"){
+    return <h1 className="dark">Online supermarket</h1>
+}else{
+    return <h1 className="light">Online supermarket</h1>
 }
-
+}
 const root = document.querySelector("#react-root");
 
 createRoot(root).render(<>
