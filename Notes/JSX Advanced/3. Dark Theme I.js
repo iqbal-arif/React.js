@@ -29,20 +29,15 @@ createRoot(root).render(<>
 
 /************************SUBMITTED************************/
 import {createRoot} from "react-dom/client";
-import clsx from "clsx";
-
-
 
 function Navbar(props) {
-    console.log(props.theme)
-    const className = clsx({
-    "navbar": true,
-    "light" : props.theme
-
-});
-    return <h1 className={className}>Online supermarket</h1>
+    // console.log(props.theme)
+ if (props.theme!=="light"){
+    return <h1 className="dark">Online supermarket</h1>
+}else{
+    return <h1 className="light">Online supermarket</h1>
 }
-
+}
 const root = document.querySelector("#react-root");
 
 createRoot(root).render(<>
