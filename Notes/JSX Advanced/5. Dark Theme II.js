@@ -1,11 +1,11 @@
-/* 3. Dark theme I *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-
+/* 3. Dark theme II *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 Update the Navbar Component such that it renders:
 
     in dark mode when the theme is "dark"
     in light mode when the theme is "light"
 
-We've already given you the styles for dark theme and light theme which you need to apply.
+In both cases, the navbar needs to have the class navbar in addition of the dark or light.
+We've already given you the styles in the index.css file.
 
 */
 
@@ -29,20 +29,15 @@ createRoot(root).render(<>
 
 /************************SUBMITTED************************/
 import {createRoot} from "react-dom/client";
-import clsx from "clsx";
-
-
 
 function Navbar(props) {
-    console.log(props.theme)
-    const className = clsx({
-    "navbar": true,
-    "light" : props.theme
-
-});
-    return <h1 className={className}>Online supermarket</h1>
+    // console.log(props.theme)
+ if (props.theme!=="light"){
+    return <h1 className="dark">Online supermarket</h1>
+}else{
+    return <h1 className="light">Online supermarket</h1>
 }
-
+}
 const root = document.querySelector("#react-root");
 
 createRoot(root).render(<>
