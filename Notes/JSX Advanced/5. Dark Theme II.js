@@ -13,9 +13,16 @@ We've already given you the styles in the index.css file.
 /*  JSX ADVANCED : INDEX.JS*/
 /********************************/
 import {createRoot} from "react-dom/client";
+import clsx from "clsx";
 
 function Navbar(props) {
-    return <h1 className={props.theme}>Online supermarket</h1>
+    const className = clsx({
+        "navbar": true,
+        "dark": props.theme === "dark",
+        "light": props.theme === "light"
+    });
+
+    return <h1 className={className}>Online supermarket</h1>
 }
 
 const root = document.querySelector("#react-root");
@@ -24,7 +31,6 @@ createRoot(root).render(<>
         <Navbar theme="light" />
         <Navbar theme="dark" />
     </>);
-
 
 
 /************************SUBMITTED************************/
