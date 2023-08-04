@@ -33,6 +33,16 @@ export default function Link(props) {
 
     return <a className={className} {...rest}>{children}</a>;
 }
+
+import clsx from "clsx";
+
+const result = clsx({
+    "link": true,
+    "link-primary": false
+});
+
+console.log(result); //"link"
+
 /*
 const className = clsx({
         "text": true, // this class is always added
