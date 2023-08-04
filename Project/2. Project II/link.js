@@ -22,6 +22,17 @@ export default function Link(props,classes) {
     return <a className={className} {...rest}>{children}</a>;
 }
 
+
+export default function Link(props) {
+    console.log(props)
+    // let linkClass=classes;
+    // console.log (linkClass)
+    const className = "ui-link";
+    // console.log(className)
+    const {children, ...rest} = props;
+
+    return <a className={className} {...rest}>{children}</a>;
+}
 /*
 const className = clsx({
         "text": true, // this class is always added
