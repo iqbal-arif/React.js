@@ -9,3 +9,22 @@ export default function Link(props,classes) {
 
     return <a className={className} {...rest}>{children}</a>;
 }
+
+import clsx from "clsx";
+
+export default function Link(props,classes) {
+    console.log(props)
+    let linkClass=classes;
+    const className = clsx("ui-link");
+    console.log(className)
+    const {children, ...rest} = props;
+
+    return <a className={className} {...rest}>{children}</a>;
+}
+
+/*
+const className = clsx({
+        "text": true, // this class is always added
+        "title": props.loggedIn
+    });
+*/
