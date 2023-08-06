@@ -49,3 +49,16 @@ const className = clsx({
         "title": props.loggedIn
     });
 */
+
+import clsx from "clsx";
+export default function Link(props,className) {
+    console.log(props)
+    const className= clsx({"ui-link":true,class1:{className}})
+    // const className = "ui-link";
+    const {children,...rest} = props;
+    // const {className="ui-link",...rest} = props;
+
+    console.log (<a className={className} {...rest}>{children}</a>);
+    return (<a className={className} {...rest}>{children}</a>);
+
+}
