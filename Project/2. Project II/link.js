@@ -62,3 +62,13 @@ export default function Link(props,className) {
     return (<a className={className} {...rest}>{children}</a>);
 
 }
+
+import clsx from "clsx"
+export default function Link(props) {
+    const {children, href, disabled} = props;
+    console.log(props)
+    let dynamicClass = children
+    const classes = clsx(dynamicClass,"ui-link")
+    console.log(classes)
+    return <a className={classes} href={href}>{children} disabled={disabled}</a>;
+}
