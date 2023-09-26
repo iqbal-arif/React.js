@@ -7,9 +7,9 @@ import Input from "./Input.js";
 function App() {
     return (<>
         <Container className="app">
-            <Link href="https://react-tutorial.app">React Tutorial</Link>
-            <Button disabled={true}>Login</Button>
-            <Input placeholder="Full Name" name="full_name" />
+            <Link className = "link-kit" tabIndex={3} href="https://react-tutorial.app">React Tutorial</Link>
+            <Button className = "link-button" disabled={true}>Login</Button>
+            <Input className="link-Input" placeholder="Full Name" name="full_name" />
         </Container>
     </>);
 }
