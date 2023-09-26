@@ -1,3 +1,6 @@
+import clsx from "clsx";
 export default function Container(props) {
-    return <div className="ui-container">{props.children}</div>;
+    const {children,tabIndex} = props;
+    const linkClasses = clsx(props.className, "ui-container");
+    return <div className={linkClasses} tabIndex={tabIndex}>{children}</div>;
 }
