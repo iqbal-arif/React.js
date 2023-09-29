@@ -4,7 +4,7 @@ Do not change anything else in the code.
 */
 
 /********************************/
-/*  STATE W HOOKS : INDEX.JS*/
+/*  CLOSURES : INDEX.JS*/
 /********************************/
 /**
 * @param {string} first_name
@@ -48,6 +48,6 @@ function getUser(first_name, last_name) {
 console.log(getUser("Sam", "Doe"));
 /***************************************************************************************/
 /********************************/
-/*  STATE W HOOKS : INDEX.HTML*/
+/*  CLOSURES : INDEX.HTML*/
 /********************************/
 <div id="react-root"></div>
