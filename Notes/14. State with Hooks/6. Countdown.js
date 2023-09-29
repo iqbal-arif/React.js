@@ -9,14 +9,13 @@ The Countdown should start from 10.
 import {useState} from "react";
 import {createRoot} from "react-dom/client";
 
-function Counter() {
-    const [seconds, setSeconds] = useState(0);
+function Countdown() {
+    const [count, setCount] = useState(10);
 
-    return <h2>{seconds} seconds elapsed</h2>;
+    return <h2>{count} times remaining</h2>;
 }
 
-createRoot(document.querySelector("#react-root")).render(<Counter />);
-
+createRoot(document.querySelector("#react-root")).render(<Countdown />);
 /************************SUBMITTED************************/
 import {createRoot} from "react-dom/client";
 import {useState} from "react";
