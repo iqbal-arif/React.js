@@ -4,50 +4,34 @@ Do not change anything else in the code.
 */
 
 /********************************/
-/*  STATE W HOOKS : INDEX.JS*/
+/*  CLOSURES : INDEX.JS*/
 /********************************/
-/**
-* @param {string} first_name
-* @param {string} last_name
-*/
-function getUser(first_name, last_name) {
-
-    function getFullName() {
-        return `${first_name} ${last_name}`;
+function getUser(age) {
+    function getCanVote() {
+        return age >= 18;
     }
-
     return {
-        first_name: first_name,
-        last_name: last_name,
-        full_name: getFullName()
+        can_vote: getCanVote()
     }
 }
 
 // sample usage (do not modify)
-console.log(getUser("Sam", "Doe"));
+console.log(getUser(20));
 /************************SUBMITTED************************/
-/**
-* @param {string} first_name
-* @param {string} last_name
-*/
-function getUser(first_name, last_name) {
+function getUser(age) {
+function getCanVote() {
+    return age >= 18;
 
-    function getFullName() {
-        //TODO: return full name (with a space between first and last name)
-        return `${first_name} ${last_name}`;
-    }
-
+}
     return {
-        first_name: first_name,
-        last_name: last_name,
-        full_name: getFullName()
+        can_vote: getCanVote()
     }
 }
 
 // sample usage (do not modify)
-console.log(getUser("Sam", "Doe"));
+console.log(getUser(20));
 /***************************************************************************************/
 /********************************/
-/*  STATE W HOOKS : INDEX.HTML*/
+/*  CLOSURES : INDEX.HTML*/
 /********************************/
 <div id="react-root"></div>
