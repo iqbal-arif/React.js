@@ -10,28 +10,28 @@ Don't worry about the number going below zero for now, we will fix it later.
 import {useState} from "react";
 import {createRoot} from "react-dom/client";
 
-function Counter() {
-    const [times, setTimes] = useState(0);
-
+function Countdown() {
+    const [count, setCount] = useState(10);
+    
     return (<>
-        <h2>{times} times clicked</h2>
-        <button onClick={() => setTimes(times + 1)}>Add 1</button>
+        <h2>{count} times remaining</h2>
+        <button onClick={() => setCount(count - 1)}>Count down</button>
     </>);
 }
 
-createRoot(document.querySelector("#react-root")).render(<Counter />);
+createRoot(document.querySelector("#react-root")).render(<Countdown />);
 /************************SUBMITTED************************/
 import {createRoot} from "react-dom/client";
 import {useState} from "react"
-function Counter() {
-    const [count, setCount] = useState(0)
+function Countdown() {
+    const [countdown, setCountdown] = useState(10)
     return (<>
-        <h2>{count} times clicked</h2>
-        <button onClick={()=> setCount(count+1)}>Add 1</button>
+        <h2>{countdown} times remaining</h2>
+        <button onClick={() => setCountdown(countdown-1)}>Count down</button>
     </>);
 }
 
-createRoot(document.querySelector("#react-root")).render(<Counter />);
+createRoot(document.querySelector("#react-root")).render(<Countdown />);
 /***************************************************************************************/
 /********************************/
 /*  CHANING STATE : INDEX.HTML*/
