@@ -19,10 +19,31 @@ function getUser(age) {
 console.log(getUser(20));
 /************************SUBMITTED************************/
 import {createRoot} from "react-dom/client";
-
+import {useState} from "react"
 function Navbar() {
+    function option() {
+    const countryList = ["Netherlands","Belgium", "France"]
+    const [a,b,c]= countryList;
+        // console.log(b)
+        if ("Netherlands"){
+        // console.log(a)
+        console.log(`${a} changed`);
+        } else if ("Belgium"){
+        console.log(`${b} changed`);
+        } else{
+        console.log(`${c} changed`);
+        }
+
+}
+    // function optionSelection(){
+    //     const ["Netherlands","Belgium", "France"] = options;
+    //     let country;
+    //     if (a = "Netherlands"){
+    //         return country;
+    //     }
+    // }
     return (
-    <select className="countries">
+    <select className="countries" onChange={option}>
         <option>Netherlands</option>
         <option>Belgium</option>
         <option>France</option>
