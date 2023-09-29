@@ -10,13 +10,12 @@ Note that you will have to destructure both state variables to pass the tests. T
 
 
 /************************SUBMITTED************************/
-import {useState} from "react";
 import {createRoot} from "react-dom/client";
-
-const [counter, setCounter] =useState(0);
+import {useState} from "react";
 
 function Counter() {
-    return <h2></h2>;
+const [seconds, setSeconds] =useState(0);
+    return <h2>{seconds} seconds elapsed</h2>;
 }
 
 createRoot(document.querySelector("#react-root")).render(<Counter />);
