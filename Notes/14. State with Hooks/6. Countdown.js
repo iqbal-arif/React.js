@@ -19,9 +19,11 @@ createRoot(document.querySelector("#react-root")).render(<Counter />);
 
 /************************SUBMITTED************************/
 import {createRoot} from "react-dom/client";
+import {useState} from "react";
 
 function Countdown() {
-    return <h2></h2>;
+    const [count, setCount] = useState(10)
+    return <h2>{count} times remaining</h2>;
 }
 
 createRoot(document.querySelector("#react-root")).render(<Countdown />);
