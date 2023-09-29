@@ -6,15 +6,25 @@ Do not change anything else in the code.
 /********************************/
 /*  STATE W HOOKS : INDEX.JS*/
 /********************************/
-import {useState} from "react";
-import {createRoot} from "react-dom/client";
+/**
+* @param {string} first_name
+* @param {string} last_name
+*/
+function getUser(first_name, last_name) {
 
-function App() {
-    return <div>Hello World</div>;
+    function getFullName() {
+        return `${first_name} ${last_name}`;
+    }
+
+    return {
+        first_name: first_name,
+        last_name: last_name,
+        full_name: getFullName()
+    }
 }
 
-createRoot(document.querySelector("#react-root")).render(<App />);
-
+// sample usage (do not modify)
+console.log(getUser("Sam", "Doe"));
 /************************SUBMITTED************************/
 /**
 * @param {string} first_name
