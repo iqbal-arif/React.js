@@ -1,4 +1,4 @@
-/* 4. Countdown *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+/* 5. Countdown *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 Complete the Countdown Component such that it returns <h2>X times remaining</h2> where X is the number of times remaining.
 The Countdown should start from 10 and decrease by 1 every time the <button> is clicked.
 Don't worry about the number going below zero for now, we will fix it later.
