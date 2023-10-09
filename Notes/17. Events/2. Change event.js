@@ -79,39 +79,7 @@ function Navbar() {
 
 createRoot(document.querySelector("#react-root")).render(<Navbar />);
 
-import {createRoot} from "react-dom/client";
-import {useState} from "react";
-function Navbar() {
-/*
-*/
-// const countries = 
-    const [countries, setCountries] = useState(["Netherlands"])
-    // const countries = ["Netherlands","Belgium","France"];
 
-    // const selectedCountry = countries.filter(selectCountry => console.log(selectCountry))
-
-    function selectCountry(){
-        countries.filter((country) =>console.log(country)
-        // {
-        //     if (country === "Netherlands") {return `${country} changed`}
-        //     else if (country === "Belgium") {return `${country} changed`}else {return `${country} changed` }
-        // })
-        // console.log(country)
-        // console.log(country
-    )}
-
-    return (
-    <select className="countries" onChange={countries => setCountries()}>
-        <option>Netherlands</option>
-        <option>Belgium</option>
-        <option>France</option>
-    </select>
-    );
-}
-
-createRoot(document.querySelector("#react-root")).render(<Navbar />);
-
-                  
 /***************************************************************************************/
 /********************************/
 /*  CHANGE EVENT : INDEX.HTML*/
