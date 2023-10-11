@@ -35,13 +35,13 @@ function Navbar() {
         }
 
 }
-    // function optionSelection(){
-    //     const ["Netherlands","Belgium", "France"] = options;
-    //     let country;
-    //     if (a = "Netherlands"){
-    //         return country;
-    //     }
-    // }
+     function optionSelection(){
+         const ["Netherlands","Belgium", "France"] = options;
+         let country;
+         if (a = "Netherlands"){
+             return country;
+         }
+     }
     return (
     <select className="countries" onChange={option}>
         <option>Netherlands</option>
