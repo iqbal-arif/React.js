@@ -17,6 +17,18 @@ function getUser(age) {
 
 // sample usage (do not modify)
 console.log(getUser(20));
+
+function getUser(age) {
+    function getCanVote() {
+        return age >= 18;
+    }
+    return {
+        can_vote: getCanVote()
+    }
+}
+
+// sample usage (do not modify)
+console.log(getUser(20));
 /************************SUBMITTED************************/
 import {createRoot} from "react-dom/client";
 import {useState} from "react"
