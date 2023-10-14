@@ -51,6 +51,23 @@ function Navbar() {
     );
 }
 
+function optionSelection(){
+         const ["Netherlands","Belgium", "France"] = options;
+         let country;
+         if (a = "Netherlands"){
+             return country;
+         }
+     }
+    return (
+    <select className="countries" onChange={option}>
+        <option>Netherlands</option>
+        <option>Belgium</option>
+        <option>France</option>
+    </select>
+    );
+}
+
+
 createRoot(document.querySelector("#react-root")).render(<Navbar />);
 
 /***************************************************************************************/
